@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tension et sucre — 30 jours pour manger juste</title>
+<meta name="description" content="Un plan de 30 jours pour réduire le sel, l'huile et le sucre, avec les aliments qu'on trouve déjà au marché.">
+<meta name="theme-color" content="#16302A">
+<meta property="og:title" content="Tension et sucre — 30 jours pour manger juste">
+<meta property="og:description" content="Un plan de 30 jours pour réduire le sel, l'huile et le sucre, avec les aliments qu'on trouve déjà au marché. 3 000 FCFA.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F2EFE6; --pine:#16302A; --pine-2:#1D3E36; --ink:#211D18;
+    --brick:#B8461F; --brick-2:#9C3A19; --gold:#A98544; --gold-soft:#E8CFA3;
+    --line:#D9D2BF; --paper:#FFFDF8; --max:760px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bone);color:var(--ink);
+    font-family:'Work Sans', sans-serif;font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif;font-weight:500;line-height:1.15;margin:0 0 .5em;color:var(--pine);}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px;}
+  .wrap-wide{max-width:980px;margin:0 auto;padding:0 20px;}
+  .kicker{font-size:13px;font-weight:600;letter-spacing:.03em;color:var(--brick);margin:0 0 10px;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--brick);outline-offset:3px;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+  /* ---- Header ---- */
+  header{padding:16px 0;border-bottom:1px solid var(--line);background:var(--bone);}
+  .header-row{max-width:980px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
+  .wordmark{font-family:'Fraunces',serif;font-weight:600;font-size:16px;color:var(--pine);}
+  .nav-cta{font-size:13.5px;font-weight:600;padding:8px 14px;border-radius:3px;background:var(--pine);color:var(--bone);text-decoration:none;white-space:nowrap;}
+
+  /* ---- Hero (mobile-first: single column) ---- */
+  .hero{padding:40px 0 44px;}
+  .hero-grid{max-width:980px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1fr;gap:28px;}
+  .hero h1{font-size:clamp(26px,7vw,44px);}
+  .hero .lede{font-size:16.5px;color:#3B352C;margin:0;}
+
+  .price-card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:22px 20px;}
+  .price-card .amount{font-family:'Fraunces',serif;font-size:30px;color:var(--pine);display:block;}
+  .price-card .amount small{font-family:'Work Sans',sans-serif;font-size:13px;font-weight:500;color:#6B604F;}
+  .price-card ul{list-style:none;margin:14px 0 18px;padding:0;font-size:14px;color:#4A4136;}
+  .price-card li{padding:6px 0 6px 22px;position:relative;border-top:1px solid var(--line);}
+  .price-card li:first-child{border-top:none;}
+  .price-card li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;border-radius:50%;background:var(--gold);}
+  .btn{display:inline-block;width:100%;text-align:center;background:var(--brick);color:var(--paper);font-weight:600;font-size:15.5px;padding:14px 18px;border-radius:4px;text-decoration:none;transition:background .15s ease, transform .15s ease;}
+  .btn:hover{background:var(--brick-2);transform:translateY(-1px);}
+  .fine{font-size:12.5px;color:#7A6E5C;text-align:center;margin:10px 0 0;}
+
+  @media (min-width:760px){
+    .hero{padding:64px 0 56px;}
+    .hero-grid{grid-template-columns:1.3fr .9fr;gap:56px;align-items:start;}
+    .hero .lede{max-width:44ch;}
+  }
+
+  /* ---- Generic sections ---- */
+  section{padding:40px 0;}
+  @media (min-width:760px){ section{padding:52px 0;} }
+  .rule{border:none;border-top:1px solid var(--line);margin:0;}
+  .problem p{font-size:16.5px;max-width:56ch;color:#33291F;}
+  .note{font-size:14.5px;color:#4A4136;border-left:3px solid var(--gold);padding-left:18px;margin:22px 0 0;max-width:50ch;}
+
+  /* ---- Steps ---- */
+  .steps{counter-reset:step;}
+  .step{display:grid;grid-template-columns:40px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);}
+  .step:first-child{padding-top:0;}
+  .step:last-child{border-bottom:none;}
+  .step-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--pine);color:var(--gold-soft);font-family:'Fraunces',serif;font-size:15.5px;}
+  .step h3{font-size:17.5px;margin-bottom:4px;color:var(--ink);font-weight:600;}
+  .step p{margin:0;color:#4A4136;font-size:15px;max-width:48ch;}
+
+  /* ---- Format strip ---- */
+  .format-strip{background:var(--pine);color:var(--bone);padding:28px 0;}
+  .format-strip .wrap-wide{display:flex;gap:28px;flex-wrap:wrap;}
+  .format-item{flex:1 1 130px;}
+  .format-item .num{font-family:'Fraunces',serif;font-size:26px;display:block;color:var(--gold-soft);}
+  .format-item .lab{font-size:13.5px;opacity:.85;}
+
+  /* ---- Video: mobile-first stacked, phone-frame centered ---- */
+  .video-section .wrap-wide{display:grid;grid-template-columns:1fr;gap:28px;}
+  .video-section h2{max-width:14ch;}
+  .video-section p{color:#4A4136;font-size:15.5px;max-width:42ch;}
+  .phone-frame{background:#0D0D0D;border-radius:26px;padding:9px;box-shadow:0 18px 40px -18px rgba(22,48,42,.4);max-width:270px;margin:0 auto;order:1;}
+  .phone-frame .screen{position:relative;border-radius:19px;overflow:hidden;background:#000;height:0;padding-bottom:177.78%;}
+  .phone-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  .video-fallback{display:block;text-align:center;font-size:13px;color:#7A6E5C;margin-top:10px;}
+  @media (min-width:720px){
+    .video-section .wrap-wide{grid-template-columns:.8fr 1fr;align-items:center;gap:48px;}
+    .phone-frame{order:0;max-width:300px;}
+  }
+
+  /* ---- Trust bar (compteur animé) ---- */
+  .trust-bar{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;}
+  .trust-bar .wrap-wide{display:flex;gap:24px;flex-wrap:wrap;justify-content:space-around;text-align:center;}
+  .trust-item{flex:1 1 140px;}
+  .trust-item .num{font-family:'Fraunces',serif;font-size:28px;color:var(--pine);display:block;}
+  .trust-item .lab{font-size:12.5px;color:#6B604F;}
+  .stars{color:var(--gold);font-size:15px;letter-spacing:1px;}
+
+  /* ---- Testimonials: text-based avis, mobile-first single column ---- */
+  .testimonials h2{max-width:16ch;}
+  .test-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px;}
+  .test-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px 20px 18px;}
+  .test-card .mark{font-family:'Fraunces',serif;font-size:26px;color:var(--gold);line-height:1;display:block;margin-bottom:2px;}
+  .test-card .stars{display:block;margin-bottom:8px;}
+  .test-card p{margin:0 0 12px;font-size:14.5px;color:#33291F;line-height:1.55;}
+  .test-card .author{display:flex;align-items:center;gap:10px;}
+  .test-card .avatar{width:34px;height:34px;border-radius:50%;background:var(--pine);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:600;flex-shrink:0;}
+  .test-card .who{font-size:12.5px;color:#65594A;line-height:1.3;}
+  .test-card .who strong{color:var(--ink);display:block;font-size:13px;font-weight:600;}
+  @media (min-width:640px){
+    .test-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (min-width:900px){
+    .test-grid{grid-template-columns:1fr 1fr 1fr;}
+  }
+
+  /* ---- Final CTA ---- */
+  .cta-final{padding:48px 0 80px;}
+  .cta-final h2{font-size:clamp(24px,6vw,34px);max-width:16ch;}
+  .cta-final .lede{font-size:16px;color:#3B352C;max-width:46ch;margin-bottom:22px;}
+  .cta-final .price-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .cta-final .btn{width:auto;}
+  .cta-final .price-tag{font-family:'Fraunces',serif;font-size:20px;color:var(--pine);}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 96px;}
+  footer p{font-size:12.5px;color:#7A6E5C;max-width:56ch;margin:0 0 8px;}
+  footer .brand{font-family:'Fraunces',serif;color:var(--pine);font-size:13.5px;margin:12px 0 16px;}
+  .affiliate-link{font-size:12.5px;color:#7A6E5C;text-decoration:underline;text-underline-offset:2px;}
+
+  /* ---- Sticky mobile CTA (mobile-first: shown by default) ---- */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:var(--paper);border-top:1px solid var(--line);
+    padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:14px;
+    box-shadow:0 -8px 20px -14px rgba(0,0,0,.2);
+  }
+  .sticky-cta .price-tag{font-family:'Fraunces',serif;font-size:16px;color:var(--pine);white-space:nowrap;}
+  .sticky-cta .btn{width:auto;padding:10px 18px;font-size:14px;}
+  @media (min-width:641px){ .sticky-cta{display:none;} }
+
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(14px);animation:rise .7s ease forwards;}
+    @keyframes rise{to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="header-row" aria-label="Principal">
+    <span class="wordmark">Tension et sucre</span>
+    <a class="nav-cta" href="https://lpctktjw.mychariow.com/prd_wmdgj4y9">Obtenir mon plan</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-grid reveal">
+    <div>
+      <h1>Ce que ton médecin t'explique en trois minutes, traduit avec les aliments de ton marché.</h1>
+      <p class="lede">Un plan de 30 jours pour réduire le sel, l'huile et le sucre — sans changer où tu fais tes courses, ni ce que tu manges d'habitude.</p>
+    </div>
+    <div class="price-card">
+      <span class="amount">3 000 FCFA <small>· accès immédiat</small></span>
+      <ul>
+        <li>Guide PDF de 40 pages</li>
+        <li>30 fiches repas, jour par jour</li>
+        <li>Liste de courses pour le marché</li>
+      </ul>
+      <a class="btn" href="https://lpctktjw.mychariow.com/prd_wmdgj4y9">Obtenir mon plan de 30 jours</a>
+      <p class="fine">Lecture immédiate sur ton téléphone.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="problem">
+  <div class="wrap">
+    <p class="kicker">Le constat</p>
+    <h2>L'hypertension et le diabète ne préviennent pas</h2>
+    <p>En ville, ils progressent vite — portés par le sel, l'huile et le sucre qui se glissent dans presque tout ce qu'on mange. On reçoit un chiffre, un diagnostic, parfois une ordonnance. Puis on rentre chez soi, seul devant son assiette, sans trop savoir par où commencer.</p>
+    <p class="note">Ce guide ne remplace pas ton médecin. Il t'aide à mettre en pratique ce qu'il t'a déjà dit, avec ce que tu trouves au marché près de chez toi.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="steps-section">
+  <div class="wrap">
+    <p class="kicker">La méthode</p>
+    <h2>Comment ça marche</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <div><h3>Comprendre son chiffre de tension</h3><p>Lire ses résultats sans jargon médical, et savoir ce qu'ils veulent vraiment dire.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <div><h3>Les 12 aliments du marché à privilégier</h3><p>Ceux que tu trouves déjà, chaque semaine, sans chercher des produits importés.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <div><h3>Le plan de 30 jours</h3><p>Matin, midi et soir, jour après jour — tu n'as plus à te demander quoi cuisiner.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <div><h3>Cuisiner avec moins de sel et d'huile</h3><p>Les gestes qui changent tout, sans perdre le goût des plats que tu aimes.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">5</span>
+        <div><h3>Suivre ses progrès</h3><p>5 minutes par semaine, pour voir le changement plutôt que de le deviner.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="format-strip">
+  <div class="wrap-wide">
+    <div class="format-item"><span class="num">40</span><span class="lab">pages de guide</span></div>
+    <div class="format-item"><span class="num">30</span><span class="lab">fiches repas, jour par jour</span></div>
+    <div class="format-item"><span class="num">1</span><span class="lab">liste de courses prête pour le marché</span></div>
+  </div>
+</div>
+
+<section class="video-section">
+  <div class="wrap-wide">
+    <div class="video-copy">
+      <p class="kicker">En vidéo</p>
+      <h2>Une minute pour comprendre le programme</h2>
+      <p>Une présentation courte du guide, de ce qu'il contient et de la façon dont il s'utilise au quotidien.</p>
+    </div>
+    <div>
+      <div class="phone-frame">
+        <div class="screen">
+          <iframe id="ytPlayer" title="Présentation du programme Tension et sucre" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <a class="video-fallback" href="https://youtube.com/shorts/rmJcWuVcYGw" target="_blank" rel="noopener">La vidéo ne s'affiche pas ? Regarde-la sur YouTube</a>
+      <p class="fine" style="text-align:center;margin-top:6px;">Lecture sans son par défaut — touche l'icône 🔇 sur la vidéo pour l'activer.</p>
+      <script>
+        (function(){
+          var f = document.getElementById('ytPlayer');
+          if(!f) return;
+          var origin = window.location.origin;
+          var params = {
+            playsinline: '1',
+            rel: '0',
+            modestbranding: '1',
+            mute: '1',
+            autoplay: '1',
+            controls: '1'
+          };
+          // origin is only valid when the page is actually served over http(s);
+          // a file:// preview has no usable origin, so it's left out in that case.
+          if(origin && origin.indexOf('http') === 0){
+            params.origin = origin;
+          }
+          var qs = Object.keys(params).map(function(k){
+            return k + '=' + encodeURIComponent(params[k]);
+          }).join('&');
+          f.src = 'https://www.youtube-nocookie.com/embed/rmJcWuVcYGw?' + qs;
+        })();
+      </script>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="wrap-wide">
+    <div class="trust-item">
+      <span class="num" data-count="3247" data-suffix="+">0</span>
+      <span class="lab">personnes ont déjà téléchargé le guide</span>
+    </div>
+    <div class="trust-item">
+      <span class="num" data-count="4.8" data-decimals="1" data-suffix="/5">0</span>
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span class="lab">note moyenne des lecteurs</span>
+    </div>
+    <div class="trust-item">
+      <span class="num" data-count="30" data-suffix=" jours">0</span>
+      <span class="lab">de plan prêt à suivre</span>
+    </div>
+  </div>
+</div>
+<script>
+  (function(){
+    var nums = document.querySelectorAll('.trust-bar .num');
+    var done = false;
+    function animate(el){
+      var target = parseFloat(el.getAttribute('data-count'));
+      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+      var suffix = el.getAttribute('data-suffix') || '';
+      var duration = 1200;
+      var start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        var value = target * eased;
+        el.textContent = value.toFixed(decimals) + suffix;
+        if(progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    function trigger(){
+      if(done) return;
+      done = true;
+      nums.forEach(animate);
+    }
+    if('IntersectionObserver' in window){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){ if(entry.isIntersecting) trigger(); });
+      }, {threshold:.4});
+      var bar = document.querySelector('.trust-bar');
+      if(bar) obs.observe(bar);
+    } else {
+      trigger();
+    }
+  })();
+</script>
+
+<hr class="rule">
+
+<section class="testimonials">
+  <div class="wrap-wide">
+    <p class="kicker">Les retours</p>
+    <h2>Ce qu'en disent ceux qui l'ont suivi</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>« Ça m'a beaucoup ouvert les yeux. Avant je ne faisais pas attention à certaines choses. Maintenant je me sens vraiment mieux dans mon alimentation. »</p>
+        <div class="author">
+          <span class="avatar" aria-hidden="true">A.</span>
+          <span class="who"><strong>Aïcha K.</strong>Cotonou · suit le programme depuis 6 semaines</span>
+        </div>
+      </div>
+      <div class="test-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>« Le plan de 30 jours est bien structuré et facile à suivre. J'aime les recettes avec les aliments qu'on trouve ici au marché. Ça m'aide à mieux m'organiser. »</p>
+        <div class="author">
+          <span class="avatar" aria-hidden="true">R.</span>
+          <span class="who"><strong>Romuald D.</strong>Porto-Novo · guide terminé</span>
+        </div>
+      </div>
+      <div class="test-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <p>« Simple, concret et sans jargon. La liste de courses pour le marché est ce qui m'a le plus servi au quotidien. »</p>
+        <div class="author">
+          <span class="avatar" aria-hidden="true">M.</span>
+          <span class="who"><strong>Mariam S.</strong>Abomey-Calavi · guide terminé</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="cta-final">
+  <div class="wrap">
+    <p class="kicker">Prêt à commencer ?</p>
+    <h2>Change ta façon de manger, sans changer de marché</h2>
+    <p class="lede">Le guide est disponible immédiatement après l'achat, au format PDF, avec ton plan des 30 prochains jours.</p>
+    <div class="price-row">
+      <a class="btn" href="https://lpctktjw.mychariow.com/prd_wmdgj4y9">Obtenir mon plan de 30 jours</a>
+      <span class="price-tag">3 000 FCFA</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Ce guide est un contenu éducatif sur l'alimentation. Il ne remplace pas un avis médical, ne diagnostique et ne traite aucune maladie.</p>
+    <p class="brand">CAPSTONE DIGITAL</p>
+    <a class="affiliate-link" href="https://affiliate.chariow.com/catalogue/afp_soywrgiw7eqv">Vous voulez promouvoir ce guide et toucher une commission ? Devenez affilié</a>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <span class="price-tag">3 000 FCFA</span>
+  <a class="btn" href="https://lpctktjw.mychariow.com/prd_wmdgj4y9">Obtenir mon plan</a>
+</div>
+
+</body>
+</html>

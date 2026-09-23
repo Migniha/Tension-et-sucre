@@ -96,7 +96,7 @@
   }
 
   @media (prefers-reduced-motion:reduce){
-    .btn, .price-card, .phone-frame, .format-item .num, .test-card{animation:none;}
+    .btn, .price-card, .phone-frame, .format-item .num{animation:none;}
     .btn::after{display:none;}
   }
 
@@ -144,33 +144,20 @@
     .phone-frame{order:0;max-width:300px;}
   }
 
-  /* ---- Trust bar (compteur animé) ---- */
-  .trust-bar{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;}
-  .trust-bar .wrap-wide{display:flex;gap:24px;flex-wrap:wrap;justify-content:space-around;text-align:center;}
-  .trust-item{flex:1 1 140px;}
-  .trust-item .num{font-family:'Fraunces',serif;font-size:28px;color:var(--pine);display:block;}
-  .trust-item .lab{font-size:12.5px;color:#6B604F;}
-  .stars{color:var(--gold);font-size:15px;letter-spacing:1px;}
-
-  /* ---- Testimonials: text-based avis, mobile-first single column ---- */
-  .testimonials h2{max-width:16ch;}
-  .test-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px;}
-  .test-card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px 20px 18px;animation:float 5s ease-in-out infinite;}
-  .test-card:nth-child(2){animation-delay:.6s;}
-  .test-card:nth-child(3){animation-delay:1.2s;}
-  .test-card .mark{font-family:'Fraunces',serif;font-size:26px;color:var(--gold);line-height:1;display:block;margin-bottom:2px;}
-  .test-card .stars{display:block;margin-bottom:8px;}
-  .test-card p{margin:0 0 12px;font-size:14.5px;color:#33291F;line-height:1.55;}
-  .test-card .author{display:flex;align-items:center;gap:10px;}
-  .test-card .avatar{width:34px;height:34px;border-radius:50%;background:var(--pine);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:600;flex-shrink:0;}
-  .test-card .who{font-size:12.5px;color:#65594A;line-height:1.3;}
-  .test-card .who strong{color:var(--ink);display:block;font-size:13px;font-weight:600;}
-  @media (min-width:640px){
-    .test-grid{grid-template-columns:1fr 1fr;}
-  }
-  @media (min-width:900px){
-    .test-grid{grid-template-columns:1fr 1fr 1fr;}
-  }
+  /* ---- Aperçu du guide (défilement vertical) ---- */
+  .apercu{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .viewer{margin-top:18px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#F7F6F2;}
+  .pv-bar{display:flex;align-items:center;justify-content:flex-end;gap:14px;padding:8px 14px;background:#fff;border-bottom:1px solid var(--line);}
+  .pv-bar button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--pine);font-size:20px;line-height:1;cursor:pointer;}
+  .pv-bar button:disabled{opacity:.35;cursor:default;}
+  .pv-zoom{font-size:13px;color:#6B604F;min-width:40px;text-align:center;}
+  .pv-scroll{height:70vh;max-height:640px;overflow:auto;padding:18px 0;-webkit-overflow-scrolling:touch;}
+  .pv-pages{display:flex;flex-direction:column;align-items:center;gap:16px;min-width:100%;width:max-content;}
+  .pv-page{position:relative;background:#fff;box-shadow:0 4px 16px -8px rgba(0,0,0,.35);overflow:hidden;container-type:inline-size;flex:0 0 auto;}
+  .pv-page img{display:block;width:100%;height:auto;user-select:none;}
+  .pv-page::after{content:"PREVIEW";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 26cqw/1 'Work Sans',sans-serif;color:rgba(220,38,38,.10);transform:rotate(-45deg);pointer-events:none;letter-spacing:.02em;}
+  .pv-note{display:flex;gap:10px;align-items:center;padding:12px 14px;background:#FBEFE6;border-top:1px solid var(--line);font-size:13.5px;color:#4A4136;}
+  .pv-note i{flex:0 0 22px;height:22px;border-radius:50%;background:#D9560E;color:#fff;font:600 13px/22px 'Work Sans',sans-serif;text-align:center;font-style:normal;}
 
   /* ---- Final CTA ---- */
   .cta-final{padding:48px 0 80px;}
@@ -207,7 +194,7 @@
 <header>
   <nav class="header-row" aria-label="Principal">
     <span class="wordmark">Tension et sucre</span>
-    <a class="nav-cta" href="https://lpctktjw.mychariow.com/tension-et-sucre/checkout">Obtenir mon plan</a>
+    <a class="nav-cta" href="#video">Obtenir mon plan</a>
   </nav>
 </header>
 
@@ -226,7 +213,7 @@
         <li>30 fiches repas, jour par jour</li>
         <li>Liste de courses pour le marché</li>
       </ul>
-      <a class="btn" href="https://lpctktjw.mychariow.com/tension-et-sucre/checkout">Obtenir mon plan de 30 jours</a>
+      <a class="btn" href="#video">Obtenir mon plan de 30 jours</a>
       <p class="fine">Lecture immédiate sur ton téléphone.</p>
     </div>
   </div>
@@ -282,7 +269,7 @@
   </div>
 </div>
 
-<section class="video-section">
+<section class="video-section" id="video">
   <div class="wrap-wide">
     <div class="video-copy">
       <p class="kicker">En vidéo</p>
@@ -325,91 +312,25 @@
   </div>
 </section>
 
-<div class="trust-bar">
-  <div class="wrap-wide">
-    <div class="trust-item">
-      <span class="num" data-count="3247" data-suffix="+">0</span>
-      <span class="lab">personnes ont déjà téléchargé le guide</span>
-    </div>
-    <div class="trust-item">
-      <span class="num" data-count="4.8" data-decimals="1" data-suffix="/5">0</span>
-      <span class="stars" aria-hidden="true">★★★★★</span>
-      <span class="lab">note moyenne des lecteurs</span>
-    </div>
-    <div class="trust-item">
-      <span class="num" data-count="30" data-suffix=" jours">0</span>
-      <span class="lab">de plan prêt à suivre</span>
-    </div>
-  </div>
-</div>
-<script>
-  (function(){
-    var nums = document.querySelectorAll('.trust-bar .num');
-    var done = false;
-    function animate(el){
-      var target = parseFloat(el.getAttribute('data-count'));
-      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-      var suffix = el.getAttribute('data-suffix') || '';
-      var duration = 1200;
-      var start = null;
-      function step(ts){
-        if(!start) start = ts;
-        var progress = Math.min((ts - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - progress, 3);
-        var value = target * eased;
-        el.textContent = value.toFixed(decimals) + suffix;
-        if(progress < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-    function trigger(){
-      if(done) return;
-      done = true;
-      nums.forEach(animate);
-    }
-    if('IntersectionObserver' in window){
-      var obs = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){ if(entry.isIntersecting) trigger(); });
-      }, {threshold:.4});
-      var bar = document.querySelector('.trust-bar');
-      if(bar) obs.observe(bar);
-    } else {
-      trigger();
-    }
-  })();
-</script>
-
-<hr class="rule">
-
-<section class="testimonials">
-  <div class="wrap-wide">
-    <p class="kicker">Les retours</p>
-    <h2>Ce qu'en disent ceux qui l'ont suivi</h2>
-    <div class="test-grid">
-      <div class="test-card">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <p>« Ça m'a beaucoup ouvert les yeux. Avant je ne faisais pas attention à certaines choses. Maintenant je me sens vraiment mieux dans mon alimentation. »</p>
-        <div class="author">
-          <span class="avatar" aria-hidden="true">A.</span>
-          <span class="who"><strong>Aïcha K.</strong>Cotonou · suit le programme depuis 6 semaines</span>
+<section class="apercu" id="apercu">
+  <div class="wrap">
+    <p class="kicker">Aperçu du guide</p>
+    <h2>Feuillette les premières pages</h2>
+    <div class="viewer" id="viewer" aria-label="Aperçu des premières pages du guide">
+      <div class="pv-bar">
+        <button type="button" id="pvOut" aria-label="Dézoomer">−</button>
+        <span class="pv-zoom" id="pvZoom">75%</span>
+        <button type="button" id="pvIn" aria-label="Zoomer">+</button>
+      </div>
+      <div class="pv-scroll" id="pvScroll" tabindex="0">
+        <div class="pv-pages" id="pvPages">
+          <div class="pv-page"><img src="apercu/page-1.jpg" alt="Page 1 du guide Tension et sucre" draggable="false"></div>
+          <div class="pv-page"><img src="apercu/page-2.jpg" alt="Page 2 du guide Tension et sucre" draggable="false" loading="lazy"></div>
+          <div class="pv-page"><img src="apercu/page-3.jpg" alt="Page 3 du guide Tension et sucre" draggable="false" loading="lazy"></div>
+          <div class="pv-page"><img src="apercu/page-4.jpg" alt="Page 4 du guide Tension et sucre" draggable="false" loading="lazy"></div>
         </div>
       </div>
-      <div class="test-card">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <p>« Le plan de 30 jours est bien structuré et facile à suivre. J'aime les recettes avec les aliments qu'on trouve ici au marché. Ça m'aide à mieux m'organiser. »</p>
-        <div class="author">
-          <span class="avatar" aria-hidden="true">R.</span>
-          <span class="who"><strong>Romuald D.</strong>Porto-Novo · guide terminé</span>
-        </div>
-      </div>
-      <div class="test-card">
-        <span class="stars" aria-hidden="true">★★★★★</span>
-        <p>« Simple, concret et sans jargon. La liste de courses pour le marché est ce qui m'a le plus servi au quotidien. »</p>
-        <div class="author">
-          <span class="avatar" aria-hidden="true">M.</span>
-          <span class="who"><strong>Mariam S.</strong>Abomey-Calavi · guide terminé</span>
-        </div>
-      </div>
+      <div class="pv-note"><i aria-hidden="true">i</i><span>Aperçu limité aux 4 premières pages. Achetez le produit pour accéder aux pages complètes du document.</span></div>
     </div>
   </div>
 </section>
@@ -422,7 +343,7 @@
     <h2>Change ta façon de manger, sans changer de marché</h2>
     <p class="lede">Le guide est disponible immédiatement après l'achat, au format PDF, avec ton plan des 30 prochains jours.</p>
     <div class="price-row">
-      <a class="btn" href="https://lpctktjw.mychariow.com/tension-et-sucre/checkout">Obtenir mon plan de 30 jours</a>
+      <a class="btn" href="https://lpctktjw.mychariow.com/prd_wmdgj4y9">Obtenir mon plan de 30 jours</a>
       <span class="price-tag">3 000 FCFA</span>
     </div>
   </div>
@@ -440,8 +361,23 @@
 
 <div class="sticky-cta">
   <span class="price-tag">3 000 FCFA</span>
-  <a class="btn" href="https://lpctktjw.mychariow.com/tension-et-sucre/checkout">Obtenir mon plan</a>
+  <a class="btn" href="#apercu">Obtenir mon plan</a>
 </div>
 
+<script>
+(function(){
+  var sc=document.getElementById('pvScroll'), pages=document.getElementById('pvPages'),
+      lab=document.getElementById('pvZoom'), zin=document.getElementById('pvIn'), zout=document.getElementById('pvOut');
+  var z=75, MIN=50, MAX=200;
+  function apply(){
+    var w=Math.round((sc.clientWidth-32)*z/100);
+    Array.prototype.forEach.call(pages.children,function(p){p.style.width=w+'px';});
+    lab.textContent=z+'%';zout.disabled=z<=MIN;zin.disabled=z>=MAX;
+  }
+  zin.onclick=function(){z=Math.min(MAX,z+25);apply();};
+  zout.onclick=function(){z=Math.max(MIN,z-25);apply();};
+  window.addEventListener('resize',apply);apply();
+})();
+</script>
 </body>
 </html>

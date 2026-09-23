@@ -145,13 +145,14 @@
   }
 
   /* ---- Aperçu du guide (défilement vertical) ---- */
-  .apercu{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .apercu{margin-top:12px;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .apercu-text{font-size:15.5px;color:#4A4136;max-width:52ch;margin:0 0 6px;}
   .viewer{margin-top:18px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#F7F6F2;}
   .pv-bar{display:flex;align-items:center;justify-content:flex-end;gap:14px;padding:8px 14px;background:#fff;border-bottom:1px solid var(--line);}
   .pv-bar button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--pine);font-size:20px;line-height:1;cursor:pointer;}
   .pv-bar button:disabled{opacity:.35;cursor:default;}
   .pv-zoom{font-size:13px;color:#6B604F;min-width:40px;text-align:center;}
-  .pv-scroll{height:70vh;max-height:640px;overflow:auto;padding:18px 0;-webkit-overflow-scrolling:touch;}
+  .pv-scroll{height:52vh;max-height:440px;overflow:auto;padding:18px 0;-webkit-overflow-scrolling:touch;}
   .pv-pages{display:flex;flex-direction:column;align-items:center;gap:16px;min-width:100%;width:max-content;}
   .pv-page{position:relative;background:#fff;box-shadow:0 4px 16px -8px rgba(0,0,0,.35);overflow:hidden;container-type:inline-size;flex:0 0 auto;}
   .pv-page img{display:block;width:100%;height:auto;user-select:none;}
@@ -316,6 +317,7 @@
   <div class="wrap">
     <p class="kicker">Aperçu du guide</p>
     <h2>Feuillette les premières pages</h2>
+    <p class="apercu-text">Tu as vu comment le programme fonctionne. Voici maintenant le guide lui-même : les vraies pages, telles que tu les liras sur ton téléphone dès l'achat. Fais défiler et juge par toi-même.</p>
     <div class="viewer" id="viewer" aria-label="Aperçu des premières pages du guide">
       <div class="pv-bar">
         <button type="button" id="pvOut" aria-label="Dézoomer">−</button>
@@ -361,7 +363,7 @@
 
 <div class="sticky-cta">
   <span class="price-tag">3 000 FCFA</span>
-  <a class="btn" href="#apercu">Obtenir mon plan</a>
+  <a class="btn" href="https://lpctktjw.mychariow.com/prd_wmdgj4y9">Obtenir mon plan</a>
 </div>
 
 <script>
